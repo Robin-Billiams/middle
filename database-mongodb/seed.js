@@ -115,7 +115,6 @@ function getImage() {
 }
 
 
-
 var products = [];
 
 for (let i = 0; i < 100; i++) {
