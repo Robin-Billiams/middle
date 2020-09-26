@@ -1,0 +1,26 @@
+{
+  "name": "middle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:setup": "node database-mongodb/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robin-Billiams/middle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Robin-Billiams/middle/issues"
+  },
+  "homepage": "https://github.com/Robin-Billiams/middle#readme",
+  "dependencies": {
+    "mongoose": "^4.11.6",
+    "random-paragraph": "^1.0.4",
+    "random-sentence": "^1.0.4",
+    "random-title": "^1.0.4"
+  }
+}
