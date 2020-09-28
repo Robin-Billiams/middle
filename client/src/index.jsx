@@ -15,7 +15,7 @@ class App extends React.Component {
     this.getProducts();
   }
 
-  getRepos() {
+  getProducts() {
     return axios.get('/middle').then(data => console.log(data));
   }
 
