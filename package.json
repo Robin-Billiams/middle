@@ -9,6 +9,9 @@
     "db:setup": "node database-mongodb/seed.js",
     "dev:react": "webpack -d --watch"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Robin-Billiams/middle.git"
