@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "db:setup": "node database-mongodb/seed.js"
+    "db:setup": "node database-mongodb/seed.js",
+    "dev:react": "webpack -d --watch"
   },
   "repository": {
     "type": "git",
@@ -18,9 +20,23 @@
   },
   "homepage": "https://github.com/Robin-Billiams/middle#readme",
   "dependencies": {
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
     "mongoose": "^4.11.6",
+    "nodemon": "^2.0.4",
     "random-paragraph": "^1.0.4",
     "random-sentence": "^1.0.4",
-    "random-title": "^1.0.4"
+    "random-title": "^1.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.44.2"
   }
 }

@@ -115,12 +115,11 @@ function getImage() {
 }
 
 
-
 var products = [];
-let id = 0;
+
 for (let i = 0; i < 100; i++) {
   let prod = {};
-  prod.productId = id;    //ID
+  prod.productId = i;    //ID
   prod.prices = [];       //PRICES
   for (let j = 0; j < 4; j++)
   {
@@ -153,7 +152,6 @@ for (let i = 0; i < 100; i++) {
     prod.captions.push(cap);
   }
   products.push(prod);
-  id++;
 }
 
 const newProducts = products;
