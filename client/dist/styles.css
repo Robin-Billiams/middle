@@ -1,0 +1,7 @@
+.grid-container {
+  display: grid;
+}
+
+div {
+  border: 1px solid blueviolet;
+}
