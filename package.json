@@ -2,11 +2,11 @@
   "name": "middle",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "start.js",
   "scripts": {
-    "start": "nodemon server/index.js",
+    "start": "nodemon server/start.js",
     "test": "jest",
-    "db:setup": "node database-mongodb/seed.js",
+    "db:setup": "node database-mongodb/start.js",
     "dev:react": "webpack -d --watch"
   },
   "jest": {
