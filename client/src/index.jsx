@@ -4,6 +4,7 @@ import $ from 'jquery';
 import axios from 'axios';
 import BundleSelect from './components/BundleSelect.jsx';
 import BundleImages from './components/BundleImages.jsx';
+import Carousel from './components/Carousel.jsx';
 
 
 class App extends React.Component {
@@ -49,6 +50,9 @@ class App extends React.Component {
         </div>
         <div className="grid-item" id="product-select">
           <BundleSelect product={this.state.currentProduct} productChecked={this.changeVisibilityMatrix}/>
+        </div>
+        <div className="grid-item" id="carousel">
+          <Carousel product={this.state.currentProduct}/>
         </div>
       </div>
       :
