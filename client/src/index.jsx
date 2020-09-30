@@ -55,6 +55,9 @@ class App extends React.Component {
     return (<div className="grid-container">
       {this.state.currentProduct ?
       <div id="bundle">
+        <div>
+          Frequently Bought Together
+        </div>
         <div className="grid-item" id="image-display">
           <BundleImages product={this.state.currentProduct} productsForDisplay={this.state.imageVisibility}/>
         </div>

@@ -89,7 +89,7 @@ class BundleImages extends React.Component {
       <img src="https://i.imgur.com/5K5Cpby.png" alt="Cannot get image" width="90" height="100"/>
       </span>
 
-      <div>
+      <span>
         <div>
           <div>Total Price</div>
           <div>
@@ -101,7 +101,7 @@ class BundleImages extends React.Component {
           </div>
           <button>BUY TOGETHER</button>
         </div>
-      </div>
+      </span>
     </div>);
   }
 }
