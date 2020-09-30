@@ -2,6 +2,10 @@
   display: grid;
 }
 
-div {
+#image-display {
   border: 1px solid blueviolet;
+}
+
+#product-select {
+  border: 1px solid orangered;
 }
