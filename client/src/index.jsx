@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import axios from 'axios';
 import BundleSelect from './components/BundleSelect.jsx';
+import BundleImages from './components/BundleImages.jsx';
 
 
 class App extends React.Component {
@@ -10,9 +11,19 @@ class App extends React.Component {
     super();
     this.state = {
       products: null,
-      currentProduct: null
+      currentProduct: null,
+      imageVisibility: null,
     };
     this.getProducts = this.getProducts.bind(this);
+    this.changeVisibilityMatrix = this.changeVisibilityMatrix.bind(this);
+  }
+
+  changeVisibilityMatrix(x) {
+    let newConfig = this.state.imageVisibility.slice();
+    newConfig[x] = !newConfig[x];
+    this.setState({
+      imageVisibility: newConfig
+    });
   }
 
   componentWillMount() {
@@ -21,18 +32,21 @@ class App extends React.Component {
 
   getProducts() {
     return axios.get('/middle')
-    .then(data => this.setState({products: data.data, currentProduct: data.data[0]}, () => console.log(this.state.currentProduct.recc_prod_names[0]))); //currently grabs all the products and stores them in products
+    .then(data => this.setState({products: data.data, currentProduct: data.data[0], imageVisibility: [true, true, true, true]})); //currently grabs all the products and stores them in products
   }
+
+
 
   render() {
     return (<div className="grid-container">
       {this.state.currentProduct ?
-      <div>
-      <div className="grid-item" id="image-display">
-      </div>
-      <div className="grid-item" id="product-select">
-        <BundleSelect product={this.state.currentProduct}/>
-      </div>
+      <div id="bundle">
+        <div className="grid-item" id="image-display">
+          <BundleImages product={this.state.currentProduct} productsForDisplay={this.state.imageVisibility}/>
+        </div>
+        <div className="grid-item" id="product-select">
+          <BundleSelect product={this.state.currentProduct} productChecked={(x) => this.changeVisibilityMatrix(x)}/>
+        </div>
       </div>
       :
       null
