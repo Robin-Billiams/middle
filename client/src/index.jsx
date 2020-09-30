@@ -36,20 +36,6 @@ class App extends React.Component {
     .then(data => this.setState({products: data.data, currentProduct: data.data[0], imageVisibility: [true, true, true, true]})); //currently grabs all the products and stores them in products
   }
 
-  // changeBundlePrice(config) {
-  //   console.log('test');
-  //   let total = this.props.product.prices[0];
-  //   for (let i = 1; i < config.length; i++) {
-  //     if (config[i]) {
-  //       total += this.props.product.prices[i];
-  //     }
-  //   }
-  //   this.setState({
-  //     bundlePrice: total
-  //   });
-  // }
-
-
 
   render() {
     return (<div className="grid-container">
