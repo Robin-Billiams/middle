@@ -1,0 +1,15 @@
+.grid-container {
+  display: grid;
+}
+
+span {
+  display: inline-block;
+}
+
+#image-display {
+  border: 1px solid blueviolet;
+}
+
+#product-select {
+  border: 1px solid orangered;
+}
