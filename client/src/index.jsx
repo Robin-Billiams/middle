@@ -13,6 +13,7 @@ class App extends React.Component {
       products: null,
       currentProduct: null,
       imageVisibility: null,
+      bundlePrice: null
     };
     this.getProducts = this.getProducts.bind(this);
     this.changeVisibilityMatrix = this.changeVisibilityMatrix.bind(this);
@@ -35,6 +36,19 @@ class App extends React.Component {
     .then(data => this.setState({products: data.data, currentProduct: data.data[0], imageVisibility: [true, true, true, true]})); //currently grabs all the products and stores them in products
   }
 
+  // changeBundlePrice(config) {
+  //   console.log('test');
+  //   let total = this.props.product.prices[0];
+  //   for (let i = 1; i < config.length; i++) {
+  //     if (config[i]) {
+  //       total += this.props.product.prices[i];
+  //     }
+  //   }
+  //   this.setState({
+  //     bundlePrice: total
+  //   });
+  // }
+
 
 
   render() {
@@ -45,7 +59,7 @@ class App extends React.Component {
           <BundleImages product={this.state.currentProduct} productsForDisplay={this.state.imageVisibility}/>
         </div>
         <div className="grid-item" id="product-select">
-          <BundleSelect product={this.state.currentProduct} productChecked={(x) => this.changeVisibilityMatrix(x)}/>
+          <BundleSelect product={this.state.currentProduct} productChecked={this.changeVisibilityMatrix}/>
         </div>
       </div>
       :
