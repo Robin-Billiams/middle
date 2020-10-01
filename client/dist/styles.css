@@ -14,6 +14,10 @@ span {
   border: 1px solid orangered;
 }
 
+#perks-banner {
+  border: 1px solid green;
+}
+
 #carousel {
-  border: 1px solid aquamarine;
+  border: 1px solid brown;
 }

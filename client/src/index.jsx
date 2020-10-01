@@ -4,6 +4,7 @@ import $ from 'jquery';
 import axios from 'axios';
 import BundleSelect from './components/BundleSelect.jsx';
 import BundleImages from './components/BundleImages.jsx';
+import PerksBanner from './components/PerksBanner.jsx';
 import Carousel from './components/Carousel.jsx';
 
 
@@ -45,11 +46,18 @@ class App extends React.Component {
       this.setState({
         currentSlideImage: newImage
       });
-    }
-    if (delta === 1 && this.state.currentSlideImage < 9) {
+    } else if (delta === 1 && this.state.currentSlideImage < 9) {
       let newImage = this.state.currentSlideImage + 1;
       this.setState({
         currentSlideImage: newImage
+      });
+    } else if (delta === -1 && this.state.currentSlideImage === 0) {
+      this.setState({
+        currentSlideImage: 9
+      });
+    } else {
+      this.setState({
+        currentSlideImage: 0
       });
     }
   }
@@ -67,6 +75,9 @@ class App extends React.Component {
         </div>
         <div className="grid-item" id="product-select">
           <BundleSelect product={this.state.currentProduct} productChecked={this.changeVisibilityMatrix}/>
+        </div>
+        <div className="grid-item" id="perks-banner">
+          <PerksBanner product={this.state.currentProduct}/>
         </div>
         <div className="grid-item" id="carousel">
           <Carousel product={this.state.currentProduct} changeSlide={this.changeSlide} currentSlideImage={this.state.currentSlideImage}/>
