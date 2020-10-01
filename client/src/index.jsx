@@ -6,6 +6,7 @@ import BundleSelect from './components/BundleSelect.jsx';
 import BundleImages from './components/BundleImages.jsx';
 import PerksBanner from './components/PerksBanner.jsx';
 import Carousel from './components/Carousel.jsx';
+import HoverGallery from './components/HoverGallery.jsx';
 
 
 class App extends React.Component {
@@ -81,6 +82,9 @@ class App extends React.Component {
         </div>
         <div className="grid-item" id="carousel">
           <Carousel product={this.state.currentProduct} changeSlide={this.changeSlide} currentSlideImage={this.state.currentSlideImage}/>
+        </div>
+        <div className="grid-item" id="hover-gallery">
+          <HoverGallery product={this.state.currentProduct}/>
         </div>
       </div>
       :

@@ -6,8 +6,13 @@ const Carousel = (props) => (
         return props.currentSlideImage === i ?
 
                <div className="carousel slide fade">
+                 <div>
                 <img src={image} alt="Cannot get image" width="500" height="600"/>
-                <div class="text">Caption Text</div>
+                </div>
+                <div className="text">
+                  <div>{props.product.long_headers[i]}</div>
+                  <div>{props.product.captions[i + 3]}</div>
+                </div>
                </div>
                :
                null
