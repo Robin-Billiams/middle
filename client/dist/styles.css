@@ -1,3 +1,23 @@
+@font-face {
+  font-family: Samsung400;
+  src: url(SamsungOne-400.woff);
+}
+
+@font-face {
+  font-family: Samsung700;
+  src: url(SamsungOne-700.woff);
+}
+
+@font-face {
+  font-family: SamsungBold;
+  src: url(SamsungSharpSans-Bold.woff);
+}
+
+h2, .frequent-products-button {
+  font-family: Samsung700;
+  vertical-align: baseline;
+}
+
 .grid-container {
   display: grid;
 }
@@ -38,4 +58,93 @@ span {
   -ms-transform: scale(1.5); /* IE 9 */
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.5);
+}
+
+.frequent-products-title {
+    font-size: 24px;
+    padding: 0 20px;
+    margin-bottom: 5px;
+}
+
+@media (min-width: 769px) {
+  .frequent-products-title h2 {
+    font-size: 24px;
+  }
+}
+
+.frequent-products-title h2 {
+  font-size: 18px;
+  color: #000000;
+  font-weight: bold;
+  padding-bottom: 2px;
+  border-bottom: solid 1px #dadada;
+}
+
+@media (min-width: 769px) {
+  .frequent-products-images {
+    padding-bottom: 30px;
+  }
+}
+
+.frequent-products-images {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative
+}
+
+.frequent-products-image-and-symbol {
+  display : flex;
+  align-items : center;
+  justify-content: center;
+}
+
+.frequent-products-symbol {
+  display: inline-block;
+  padding-right: 15px;
+  padding-left: 15px;
+
+}
+
+.plus, .equals {
+  font-size: 30px;
+}
+
+.frequent-products-button {
+  font-weight: 700;
+  background-color: #1428a0;
+  color: #fff;
+  border: 0 none;
+  min-width: 250px;
+  margin: 10px 0px;
+
+}
+@media (min-width: 769px) {
+  .frequent-products-button {
+      font-size: 12px;
+      letter-spacing: .25em;
+  }
+}
+
+.frequent-products-button {
+    display: inline-block;
+    position: relative;
+    padding: 20px 38px 20px 40px;
+    overflow: hidden;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    background-repeat: no-repeat;
+    background-position: 0 0, 0 100%;
+    background-size: 100% 100%, 100% 100%;
+
+    border-radius: 40px;
+    outline: 0;
+
+    transition: .2s ease-in;
+    background-clip: border-box;
+    z-index: 1;
+}
 }

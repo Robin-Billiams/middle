@@ -41,52 +41,65 @@ class BundleImages extends React.Component {
 
 
   render() {
-    return (<div>
+    return (<div className="frequent-products-images">
       <span>
-      <img src={this.props.product.images[0]} alt="Cannot get image" width="100" height="100"/>
+      <img src={this.props.product.images[0]} alt="Cannot get image" width="220.41" height="150.33"/>
       </span>
 
       {this.props.productsForDisplay[1] ?
-      <span>
-      <span id='plus-1'>
-      <img src="https://i.imgur.com/Sbaiqsx.png" alt="Cannot get image" width="90" height="100"/>
+      <span className="frequent-products-image-and-symbol">
+      <span className="frequent-products-symbol">
+      <div className="plus" id='plus-1'>
+        +
+      {/* <img src="https://i.imgur.com/Sbaiqsx.png" alt="Cannot get image" width="50" height="70"/> */}
+      </div>
       </span>
 
       <span>
-      <img src={this.props.product.images[1]} alt="Cannot get image" width="100" height="100"/>
+      <img src={this.props.product.images[1]} alt="Cannot get image" width="220.41" height="150.33"/>
       </span>
       </span>
       :
       null}
 
       {this.props.productsForDisplay[2] ?
-      <span>
-      <span id='plus-2'>
-      <img src="https://i.imgur.com/Sbaiqsx.png" alt="Cannot get image" width="90" height="100"/>
+      <span className="frequent-products-image-and-symbol">
+      <span className="frequent-products-symbol">
+      <div className="plus" id='plus-2'>
+        +
+      {/* <img src="https://i.imgur.com/Sbaiqsx.png" alt="Cannot get image" width="50" height="70"/> */}
+      </div>
       </span>
 
       <span>
-      <img src={this.props.product.images[2]} alt="Cannot get image" width="100" height="100"/>
+      <img src={this.props.product.images[2]} alt="Cannot get image" width="220.41" height="150.33"/>
       </span>
       </span>
       :
       null}
 
       {this.props.productsForDisplay[3] ?
-      <span>
-      <span id='plus-3'>
-      <img src="https://i.imgur.com/Sbaiqsx.png" alt="Cannot get image" width="90" height="100"/>
+      <span className="frequent-products-image-and-symbol">
+      <span className="frequent-products-symbol">
+      <div className="plus" id='plus-3'>
+        +
+      {/* <img src="https://i.imgur.com/Sbaiqsx.png" alt="Cannot get image" width="50" height="70"/> */}
+      </div>
       </span>
 
       <span>
-      <img src={this.props.product.images[3]} alt="Cannot get image" width="100" height="100"/>
+      <img src={this.props.product.images[3]} alt="Cannot get image" width="220.41" height="150.33"/>
       </span>
       </span>
       :
       null}
 
-      <span>
-      <img src="https://i.imgur.com/5K5Cpby.png" alt="Cannot get image" width="90" height="100"/>
+      <span className="frequent-products-image-and-symbol">
+      <span className="frequent-products-symbol">
+      <div className="equals">
+        =
+      {/* <img src="https://i.imgur.com/5K5Cpby.png" alt="Cannot get image" width="50" height="70"/> */}
+      </div>
       </span>
 
       <span>
@@ -99,8 +112,9 @@ class BundleImages extends React.Component {
               <div>Save $500.00</div>
             </span>
           </div>
-          <button>BUY TOGETHER</button>
+          <button className="frequent-products-button">BUY TOGETHER</button>
         </div>
+      </span>
       </span>
     </div>);
   }
