@@ -67,7 +67,8 @@ class App extends React.Component {
   render() {
     return (<div className="grid-container">
       {this.state.currentProduct ?
-      <div id="bundle">
+      <div>
+      <div id="frequent-products-container">
         <div className="frequent-products-title">
           <h2>Frequently Bought Together</h2>
         </div>
@@ -76,6 +77,7 @@ class App extends React.Component {
         </div>
         <div className="grid-item" id="product-select">
           <BundleSelect product={this.state.currentProduct} productChecked={this.changeVisibilityMatrix}/>
+        </div>
         </div>
         <div className="grid-item" id="perks-banner">
           <PerksBanner product={this.state.currentProduct}/>
@@ -86,7 +88,7 @@ class App extends React.Component {
         <div className="grid-item" id="hover-gallery">
           <HoverGallery product={this.state.currentProduct}/>
         </div>
-      </div>
+        </div>
       :
       null
       }

@@ -102,14 +102,16 @@ class BundleImages extends React.Component {
       </div>
       </span>
 
-      <span>
+      <span className="frequent-products-total-container">
         <div>
-          <div>Total Price</div>
-          <div>
-            <span>${this.state.bundlePrice}</span>
-            <span>
-              <div>$9000</div>
-              <div>Save $500.00</div>
+          <div className="frequent-products-total-price-label">Total Price
+          </div>
+          <div className="frequent-products-total-price-values">
+            <span className="frequent-products-total-price-values-discount">${this.state.bundlePrice}
+            </span>
+            <span className="frequent-products-total-price-values-full">
+              <div className="frequent-products-total-price-values-original">$1,000,000.00</div>
+              <div className="frequent-products-total-price-values-save">Save $500.00</div>
             </span>
           </div>
           <button className="frequent-products-button">BUY TOGETHER</button>
