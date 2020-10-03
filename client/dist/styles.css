@@ -144,6 +144,12 @@ span {
 
 }
 
+.fp-image {
+  width: 220px;
+  height: 150px;
+  overflow: hidden;
+}
+
 .plus, .equals {
   font-size: 30px;
 }
@@ -301,6 +307,8 @@ span {
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
   border-right: 1px solid white;
   padding: 10px 45px;
   justify-content: center;
@@ -330,10 +338,11 @@ span {
   float: left;
   border-left: 1px solid black;
   padding: 20px;
-  height: 100%;
+
   float: left;
   position: relative;
   width: 33.33333%;
+  min-height: 100%;
 }
 }
 
@@ -349,4 +358,124 @@ span {
   font-weight: bold;
   line-height: 1.5;
   font-size: 14px;
+}
+
+/* Slideshow */
+ .carousel-container {
+   width: 100%;
+   position: relative;
+   display: inline-block;
+}
+
+ .slide-image {
+  width: 100%;
+}
+
+.slide-image-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+  height: 810px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.button-prev, .button-next {
+  position:absolute;
+  top:50%;
+}
+
+.button-prev {
+  left: 0;
+}
+
+.button-next {
+  right: 0;
+}
+
+.carousel-slide {
+  text-align: center;
+}
+
+.slide-text {
+  width: 720px;
+  top:15%;
+  left: 25%;
+  text-align: center;
+  position: absolute;
+}
+
+.slide-text-header {
+  font-family: SamsungSharpSans;
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.slide-text-caption {
+  font-family: SamsungSansRegular;
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 1.30;
+}
+/* button {
+  display: block;
+  width: 3.88888889vw;
+  height: 3.88888889vw;
+  padding: .55555556vw;
+
+} */
+/* @media only screen and (max-width: 1440px) and (min-width: 768px) {
+.button-prev, .button-next {
+  display: block;
+  width: 3.88888889vw;
+  height: 3.88888889vw;
+  padding: .55555556vw;
+  position: relative;
+    top: 50%;
+  }
+}
+
+.button-prev {
+  left: 0;
+}
+
+button {
+  border: 0;
+    margin: 0;
+    overflow: visible;
+    background: transparent;
+    border-radius: 0;
+    cursor: pointer;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+} */
+/*
+
+.button-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.button-prev:hover, .button-next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+*/
+.slide-image-container {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }

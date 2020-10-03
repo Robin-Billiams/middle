@@ -43,7 +43,9 @@ class BundleImages extends React.Component {
   render() {
     return (<div className="frequent-products-images">
       <span className="frequent-products-image-and-symbol">
-      <img src={this.props.product.images[0]} alt="Cannot get image" width="220.41" height="150.33"/>
+        <span className="fp-image">
+      <img src={this.props.product.images[0]} alt="Cannot get image"/>
+      </span>
       </span>
 
       {this.props.productsForDisplay[1] ?
@@ -55,8 +57,8 @@ class BundleImages extends React.Component {
       </div>
       </span>
 
-      <span>
-      <img src={this.props.product.images[1]} alt="Cannot get image" width="220.41" height="150.33"/>
+      <span className="fp-image">
+      <img src={this.props.product.images[1]} alt="Cannot get image"/>
       </span>
       </span>
       :
@@ -71,8 +73,8 @@ class BundleImages extends React.Component {
       </div>
       </span>
 
-      <span>
-      <img src={this.props.product.images[2]} alt="Cannot get image" width="220.41" height="150.33"/>
+      <span className="fp-image">
+      <img src={this.props.product.images[2]} alt="Cannot get image"/>
       </span>
       </span>
       :
@@ -87,8 +89,8 @@ class BundleImages extends React.Component {
       </div>
       </span>
 
-      <span>
-      <img src={this.props.product.images[3]} alt="Cannot get image" width="220.41" height="150.33"/>
+      <span className="fp-image">
+      <img src={this.props.product.images[3]} alt="Cannot get image"/>
       </span>
       </span>
       :
