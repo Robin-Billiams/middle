@@ -42,7 +42,7 @@ class BundleImages extends React.Component {
 
   render() {
     return (<div className="frequent-products-images">
-      <span>
+      <span className="frequent-products-image-and-symbol">
       <img src={this.props.product.images[0]} alt="Cannot get image" width="220.41" height="150.33"/>
       </span>
 

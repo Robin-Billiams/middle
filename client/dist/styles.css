@@ -19,17 +19,41 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 @font-face {
-  font-family: SamsungBold;
+  font-family: SamsungSansLight;
+  src: url(SamsungSans-Light.woff);
+}
+
+@font-face {
+  font-family: SamsungSansMedium;
+  src: url(SamsungSans-Medium.woff);
+}
+
+@font-face {
+  font-family: SamsungSansRegular;
+  src: url(SamsungSans-Regular.woff);
+}
+
+@font-face {
+  font-family: SamsungSansThin;
+  src: url(SamsungSans-Thin.woff);
+}
+
+@font-face {
+  font-family: SamsungSharpSans;
   src: url(SamsungSharpSans-Bold.woff);
 }
 
-h2, .frequent-products-button, .frequent-products-total-price-label, .frequent-products-total-price-values {
+h2, div, span {
   font-family: Samsung700;
   vertical-align: baseline;
 }
 
 .grid-container {
   display: grid;
+}
+
+div {
+  display: block;
 }
 
 span {
@@ -70,14 +94,9 @@ span {
   transform: scale(1.5);
 }
 
-/* .frequent-products-container {
-    margin-left: 76px;
-    margin-right: 76px;
-    max-width: 1440px;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-} */
+ .frequent-products-container {
+  margin: 0 30px;
+}
 
 .frequent-products-title {
     font-size: 24px;
@@ -108,7 +127,8 @@ span {
 .frequent-products-images {
   display: flex;
   flex-wrap: wrap;
-  position: relative
+  position: relative;
+  max-width: 1440px;
 }
 
 .frequent-products-image-and-symbol {
@@ -221,4 +241,112 @@ span {
     line-height: 1.1;
     white-space: nowrap;
 
+}
+
+.frequent-products-select {
+  padding: 0 3%;
+  max-width: 1440px;
+}
+
+.frequent-products-select-option {
+  display: flex;
+  margin: 15px 0;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.frequent-products-select-option-checkbox {
+  margin-right: 10px;
+  background-color: #1428a0;
+  border: solid 1px #1428a0;
+}
+
+.frequent-products-item-name {
+  font-family: SamsungSansRegular;
+  color: #000;
+  font-size: 14px;
+  width: auto;
+  position: relative;
+  padding-right: 1em;
+}
+
+.frequent-products-item-price {
+  font-size: 14px;
+  margin-left: 10px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.perks-container {
+  padding: 5px 0;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  width: 90%;
+  max-width: 1440px;
+  background-color: #f7f7f7;
+  position: relative;
+  overflow: hidden;
+}
+
+/* .perks-container-inner {
+  max-width: 1440px;
+  text-align: left;
+  display: flex;
+} */
+
+.perks-box-0 {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid white;
+  padding: 10px 45px;
+  justify-content: center;
+  border: 0 solid rgba(0,0,0,0);
+  float: left;
+  position: relative;
+  width: 20%;
+}
+
+.perks-box-0-inner {
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.perks-box-topics {
+  border: 0 solid rgba(0,0,0,0);
+  float: left;
+  position: relative;
+  width: 75%;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+@media (min-width: 769px) {
+ .perks-box {
+  box-sizing: border-box;
+  float: left;
+  border-left: 1px solid black;
+  padding: 20px;
+  height: 100%;
+  float: left;
+  position: relative;
+  width: 33.33333%;
+}
+}
+
+.perks-box-header {
+  font-family: SamsungSharpSans;
+  line-height: 1.2;
+  font-size: 32px;
+}
+
+.perks-box-caption {
+  font-family: SamsungSansRegular;
+  padding: 20px 0px 0px 0px;
+  font-weight: bold;
+  line-height: 1.5;
+  font-size: 14px;
 }

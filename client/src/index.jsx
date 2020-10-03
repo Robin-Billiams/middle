@@ -68,7 +68,7 @@ class App extends React.Component {
     return (<div className="grid-container">
       {this.state.currentProduct ?
       <div>
-      <div id="frequent-products-container">
+      <div className="frequent-products-container">
         <div className="frequent-products-title">
           <h2>Frequently Bought Together</h2>
         </div>

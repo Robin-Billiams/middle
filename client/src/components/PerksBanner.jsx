@@ -1,23 +1,29 @@
 import React from 'react';
 
 const PerksBanner = (props) => (
-  <div>
-    <span className="perks-box 0">{props.product.short_headers[0]}</span>
+  <div className="perks-container">
+    <div className="perks-container-inner">
+    <div className="perks-box-0">
+      <h3 className="perks-box-0-inner">{props.product.short_headers[0]}</h3>
+      </div>
 
-    <span className="perks-box 1">
+    <div className="perks-box-topics">
+    <div className="perks-box">
     <div className="perks-box-header">{props.product.short_headers[1]}</div>
     <div className="perks-box-caption">{props.product.captions[0]}</div>
-    </span>
+    </div>
 
-    <span className="perks-box 2">
+    <div className="perks-box">
     <div className="perks-box-header">{props.product.short_headers[2]}</div>
     <div className="perks-box-caption">{props.product.captions[2]}</div>
-    </span>
+    </div>
 
-    <span className="perks-box 3">
+    <div className="perks-box">
     <div className="perks-box-header">{props.product.short_headers[3]}</div>
     <div className="perks-box-caption">{props.product.captions[3]}</div>
-    </span>
+    </div>
+    </div>
+    </div>
   </div>
 );
 
