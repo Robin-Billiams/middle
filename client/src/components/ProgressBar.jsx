@@ -10,7 +10,7 @@ const ProgressBar = (props) => {
   const fillerStyles = {
     width: `${props.progress}%`,
     height: '4px',
-    background: '#7fc242'
+    background: '#1428a0'
   }
 
   return (
