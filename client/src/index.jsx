@@ -36,6 +36,10 @@ class App extends React.Component {
     this.getProducts();
   }
 
+  // componentDidMount() {
+  //   setTimeOut(() => this.changeSlide(1), 5000);
+  // }
+
   getProducts() {
     return axios.get('/middle')
     .then(data => this.setState({products: data.data, currentProduct: data.data[0], imageVisibility: [true, true, true, true]})); //currently grabs all the products and stores them in products
