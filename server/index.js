@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const Middle = require('../database-mongodb/Middle.js');
 const app = express();
-//const PORT = 4000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -24,7 +23,3 @@ app.get('/middle', function(req, res) {
 });
 
 module.exports = app;
-
-// app.listen(PORT, () => {
-//   console.log(`listening on port ${PORT}`);
-// });
