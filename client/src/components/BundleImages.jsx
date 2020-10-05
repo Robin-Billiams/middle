@@ -41,66 +41,84 @@ class BundleImages extends React.Component {
 
 
   render() {
-    return (<div>
-      <span>
-      <img src={this.props.product.images[0]} alt="Cannot get image" width="100" height="100"/>
+    return (<div className="frequent-products-images">
+      <span className="frequent-products-image-and-symbol">
+        <span className="fp-image">
+      <img src={this.props.product.images[0]} alt="Cannot get image"/>
+      </span>
       </span>
 
       {this.props.productsForDisplay[1] ?
-      <span>
-      <span id='plus-1'>
-      <img src="https://i.imgur.com/Sbaiqsx.png" alt="Cannot get image" width="90" height="100"/>
+      <span className="frequent-products-image-and-symbol">
+      <span className="frequent-products-symbol">
+      <div className="plus" id='plus-1'>
+        +
+      {/* <img src="https://i.imgur.com/Sbaiqsx.png" alt="Cannot get image" width="50" height="70"/> */}
+      </div>
       </span>
 
-      <span>
-      <img src={this.props.product.images[1]} alt="Cannot get image" width="100" height="100"/>
+      <span className="fp-image">
+      <img src={this.props.product.images[1]} alt="Cannot get image"/>
       </span>
       </span>
       :
       null}
 
       {this.props.productsForDisplay[2] ?
-      <span>
-      <span id='plus-2'>
-      <img src="https://i.imgur.com/Sbaiqsx.png" alt="Cannot get image" width="90" height="100"/>
+      <span className="frequent-products-image-and-symbol">
+      <span className="frequent-products-symbol">
+      <div className="plus" id='plus-2'>
+        +
+      {/* <img src="https://i.imgur.com/Sbaiqsx.png" alt="Cannot get image" width="50" height="70"/> */}
+      </div>
       </span>
 
-      <span>
-      <img src={this.props.product.images[2]} alt="Cannot get image" width="100" height="100"/>
+      <span className="fp-image">
+      <img src={this.props.product.images[2]} alt="Cannot get image"/>
       </span>
       </span>
       :
       null}
 
       {this.props.productsForDisplay[3] ?
-      <span>
-      <span id='plus-3'>
-      <img src="https://i.imgur.com/Sbaiqsx.png" alt="Cannot get image" width="90" height="100"/>
+      <span className="frequent-products-image-and-symbol">
+      <span className="frequent-products-symbol">
+      <div className="plus" id='plus-3'>
+        +
+      {/* <img src="https://i.imgur.com/Sbaiqsx.png" alt="Cannot get image" width="50" height="70"/> */}
+      </div>
       </span>
 
-      <span>
-      <img src={this.props.product.images[3]} alt="Cannot get image" width="100" height="100"/>
+      <span className="fp-image">
+      <img src={this.props.product.images[3]} alt="Cannot get image"/>
       </span>
       </span>
       :
       null}
 
-      <span>
-      <img src="https://i.imgur.com/5K5Cpby.png" alt="Cannot get image" width="90" height="100"/>
+      <span className="frequent-products-image-and-symbol">
+      <span className="frequent-products-symbol">
+      <div className="equals">
+        =
+      {/* <img src="https://i.imgur.com/5K5Cpby.png" alt="Cannot get image" width="50" height="70"/> */}
+      </div>
       </span>
 
-      <span>
+      <span className="frequent-products-total-container">
         <div>
-          <div>Total Price</div>
-          <div>
-            <span>${this.state.bundlePrice}</span>
-            <span>
-              <div>$9000</div>
-              <div>Save $500.00</div>
+          <div className="frequent-products-total-price-label">Total Price
+          </div>
+          <div className="frequent-products-total-price-values">
+            <span className="frequent-products-total-price-values-discount">${this.state.bundlePrice}
+            </span>
+            <span className="frequent-products-total-price-values-full">
+              <div className="frequent-products-total-price-values-original">$1,000,000.00</div>
+              <div className="frequent-products-total-price-values-save">Save $500.00</div>
             </span>
           </div>
-          <button>BUY TOGETHER</button>
+          <button className="frequent-products-button">BUY TOGETHER</button>
         </div>
+      </span>
       </span>
     </div>);
   }

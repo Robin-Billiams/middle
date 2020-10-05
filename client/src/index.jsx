@@ -36,6 +36,10 @@ class App extends React.Component {
     this.getProducts();
   }
 
+  // componentDidMount() {
+  //   setTimeOut(() => this.changeSlide(1), 5000);
+  // }
+
   getProducts() {
     return axios.get('/middle')
     .then(data => this.setState({products: data.data, currentProduct: data.data[0], imageVisibility: [true, true, true, true]})); //currently grabs all the products and stores them in products
@@ -67,15 +71,17 @@ class App extends React.Component {
   render() {
     return (<div className="grid-container">
       {this.state.currentProduct ?
-      <div id="bundle">
-        <div>
-          Frequently Bought Together
+      <div>
+      <div className="frequent-products-container">
+        <div className="frequent-products-title">
+          <h2>Frequently Bought Together</h2>
         </div>
         <div className="grid-item" id="image-display">
           <BundleImages product={this.state.currentProduct} productsForDisplay={this.state.imageVisibility}/>
         </div>
         <div className="grid-item" id="product-select">
           <BundleSelect product={this.state.currentProduct} productChecked={this.changeVisibilityMatrix}/>
+        </div>
         </div>
         <div className="grid-item" id="perks-banner">
           <PerksBanner product={this.state.currentProduct}/>
@@ -86,7 +92,7 @@ class App extends React.Component {
         <div className="grid-item" id="hover-gallery">
           <HoverGallery product={this.state.currentProduct}/>
         </div>
-      </div>
+        </div>
       :
       null
       }
