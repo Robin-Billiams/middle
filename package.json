@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon server/start.js",
     "test": "jest",
-    "db:setup": "node database-mongodb/start.js",
+    "db:setup": "node database-mongodb/seed.js",
     "dev:react": "webpack -d --watch"
   },
   "jest": {
