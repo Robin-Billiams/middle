@@ -8,8 +8,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static(__dirname + '/../client/dist'));
 
-app.get('/middle', function(req, res) {
-  Middle.find({})
+app.get('/middle/:prodId', function(req, res) {
+  let id = Number(req.params.prodId);
+  const query  = Middle.where({productId: id });
+  query.findOne({})
     .lean()
     .exec(function(err, docs) {
     })

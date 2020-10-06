@@ -13,7 +13,6 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      products: null,
       currentProduct: null,
       imageVisibility: null,
       bundlePrice: null,
@@ -36,9 +35,14 @@ class App extends React.Component {
     this.getProducts();
   }
 
+
   getProducts() {
-    return axios.get('/middle')
-    .then(data => this.setState({products: data.data, currentProduct: data.data[0], imageVisibility: [true, true, true, true]})); //currently grabs all the products and stores them in products
+    let prodId = 0;
+    if (window.location.search) {
+      prodId = window.location.search.slice(1);
+    }
+    return axios.get('/middle/' + String(prodId))
+    .then(data => this.setState({currentProduct: data.data, imageVisibility: [true, true, true, true]})); //currently grabs all the products and stores them in products
   }
 
   changeSlide(delta) {
