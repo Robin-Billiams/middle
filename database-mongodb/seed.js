@@ -157,8 +157,11 @@ for (let i = 0; i < 100; i++) {
 const newProducts = products;
 
 const insertProducts = function() {
-  Middle.create(newProducts)
-    .then(() => {console.log('db seeded!'); db.disconnect();});
+  Middle.deleteMany({}, function(err, result) {
+    Middle.create(newProducts)
+    .then(() => {console.log('db seeded!'); db.disconnect();
+  });
+});
 };
 
 insertProducts();
