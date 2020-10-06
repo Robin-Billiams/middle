@@ -9,7 +9,7 @@ import Carousel from './components/Carousel.jsx';
 import HoverGallery from './components/HoverGallery.jsx';
 
 
-class App extends React.Component {
+class MiddleModule extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -100,4 +100,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('middle'));
+ReactDOM.render(<MiddleModule />, document.getElementById('middle'));
