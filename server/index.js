@@ -2,11 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const Middle = require('../database-mongodb/Middle.js');
 const app = express();
+const cors = require('cors');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static(__dirname + '/../client/dist'));
+app.use(cors())
 
 app.get('/middle/:prodId', function(req, res) {
   let id = Number(req.params.prodId);

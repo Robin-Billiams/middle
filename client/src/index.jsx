@@ -7,6 +7,7 @@ import BundleImages from './components/BundleImages.jsx';
 import PerksBanner from './components/PerksBanner.jsx';
 import Carousel from './components/Carousel.jsx';
 import HoverGallery from './components/HoverGallery.jsx';
+const server = 'http://localhost:4000/middle/';
 
 
 class MiddleModule extends React.Component {
@@ -41,7 +42,7 @@ class MiddleModule extends React.Component {
     if (window.location.search) {
       prodId = window.location.search.slice(1);
     }
-    return axios.get('/middle/' + String(prodId))
+    return axios.get(server + String(prodId))
     .then(data => this.setState({currentProduct: data.data, imageVisibility: [true, true, true, true]})); //currently grabs all the products and stores them in products
   }
 
