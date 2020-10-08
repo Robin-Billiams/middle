@@ -8,6 +8,8 @@ import PerksBanner from './components/PerksBanner.jsx';
 import Carousel from './components/Carousel.jsx';
 import HoverGallery from './components/HoverGallery.jsx';
 import TextSection from './components/TextSection.jsx';
+
+import './styles.css';
 const server = 'http://localhost:4000/middle/';
 
 
