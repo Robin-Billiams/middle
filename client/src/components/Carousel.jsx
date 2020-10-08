@@ -74,7 +74,21 @@ componentWillUnmount() {
                :
                null
       })}
-      <button className="button-prev" onClick={() => {this.props.changeSlide(-1); clearInterval(this.timer); this.startTimer();}}>Prev</button>
+      <button className="button-prev" onClick={() => {this.props.changeSlide(-1); clearInterval(this.timer); this.startTimer();}}>
+      <span className="hidden">Previous</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" focusable="false" role="presentation" aria-hidden="true" tabindex="-1" disabled="disabled" clickable="false">
+                    <g fill="none" fill-rule="evenodd">
+                        <g>
+                            <circle cx="20" cy="20" r="20"></circle>
+                            <g fill-rule="nonzero">
+                                <path d="M15.179 3.173L16.043 4.077 7.765 12 16.043 19.923 15.179 20.827 5.957 12z" transform="translate(8 8)"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+
+
+      </button>
       <button className="button-next" onClick={() => {this.props.changeSlide(1); clearInterval(this.timer); this.startTimer();}}>Next</button>
 
       <ProgressBar progress={this.state.barPercentage}/>
