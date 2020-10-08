@@ -7,6 +7,7 @@ import BundleImages from './components/BundleImages.jsx';
 import PerksBanner from './components/PerksBanner.jsx';
 import Carousel from './components/Carousel.jsx';
 import HoverGallery from './components/HoverGallery.jsx';
+import TextSection from './components/TextSection.jsx';
 const server = 'http://localhost:4000/middle/';
 
 
@@ -43,7 +44,7 @@ class MiddleModule extends React.Component {
       prodId = window.location.search.slice(1);
     }
     return axios.get(server + String(prodId))
-    .then(data => this.setState({currentProduct: data.data, imageVisibility: [true, true, true, true]})); //currently grabs all the products and stores them in products
+    .then(data => this.setState({currentProduct: data.data, imageVisibility: [true, true, true, true]}));
   }
 
   changeSlide(delta) {
@@ -86,6 +87,9 @@ class MiddleModule extends React.Component {
         </div>
         <div className="grid-item perks-banner">
           <PerksBanner product={this.state.currentProduct}/>
+        </div>
+        <div className="grid-item text-section">
+          <TextSection product={this.state.currentProduct}/>
         </div>
         <div className="grid-item carousel">
           <Carousel product={this.state.currentProduct} changeSlide={this.changeSlide} currentSlideImage={this.state.currentSlideImage}/>

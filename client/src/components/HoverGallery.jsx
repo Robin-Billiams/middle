@@ -18,7 +18,21 @@ const HoverGallery = (props) => (
       </div>
       <div className="right-section">
         <div className="zoom right-section-top">
-        <img src={props.product.images[3]} alt="Cannot get image"/>
+
+          <div className="right-section-text-wrapper">
+            <div className="right-section-header-wrapper">
+            {props.product.short_headers[2]}
+             </div>
+
+            <div className="right-section-caption-wrapper">
+            <h3 className="right-section-code">
+              Boundless Design
+              </h3>
+              <p className="right-section-caption">
+                {props.product.captions[4]}
+              </p>
+            </div>
+          </div>
         </div>
         <div className="zoom right-section-bottom">
             <img src={props.product.images[4]} alt="Cannot get image"/>
