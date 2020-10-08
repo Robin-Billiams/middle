@@ -73,24 +73,24 @@ class MiddleModule extends React.Component {
     return (<div className="grid-container">
       {this.state.currentProduct ?
       <div>
-      <div className="frequent-products-container">
+      <div className="grid-item frequent-products-container">
         <div className="frequent-products-title">
           <h2>Frequently Bought Together</h2>
         </div>
-        <div className="grid-item" id="image-display">
+        <div className="grid-item image-display">
           <BundleImages product={this.state.currentProduct} productsForDisplay={this.state.imageVisibility}/>
         </div>
-        <div className="grid-item" id="product-select">
+        <div className="grid-item product-select">
           <BundleSelect product={this.state.currentProduct} productChecked={this.changeVisibilityMatrix}/>
         </div>
         </div>
-        <div className="grid-item" id="perks-banner">
+        <div className="grid-item perks-banner">
           <PerksBanner product={this.state.currentProduct}/>
         </div>
-        <div className="grid-item" id="carousel">
+        <div className="grid-item carousel">
           <Carousel product={this.state.currentProduct} changeSlide={this.changeSlide} currentSlideImage={this.state.currentSlideImage}/>
         </div>
-        <div className="grid-item" id="hover-gallery">
+        <div className="grid-item hover-gallery">
           <HoverGallery product={this.state.currentProduct}/>
         </div>
         </div>
