@@ -5,6 +5,7 @@ import {
   leftSection,
   zoom,
   leftSectionTop,
+  leftSectionBottom,
   leftSectionBottomLeft,
   leftSectionBottomRight,
   rightSection,
@@ -21,14 +22,14 @@ const HoverGallery = (props) => (
     <div className={galleryContainerInner}>
       <div className={leftSection}>
         <div className={`${zoom} ${leftSectionTop}`}>
-        <img src={props.product.images[0]} alt="Cannot get image"/>
+        <img src={props.product.images[0]} alt="Cannot get image" width="100%" height ="100%"/>
         </div>
-        <div className="left-section-bottom">
+        <div className={leftSectionBottom}>
           <div className={`${zoom} ${leftSectionBottomLeft}`}>
-          <img src={props.product.images[1]} alt="Cannot get image"/>
+          <img src={props.product.images[1]} alt="Cannot get image" width="100%" height ="100%"/>
           </div>
           <div className={`${zoom} ${leftSectionBottomRight}`}>
-          <img src={props.product.images[2]} alt="Cannot get image"/>
+          <img src={props.product.images[2]} alt="Cannot get image" width="100%" height ="100%"/>
           </div>
         </div>
       </div>
@@ -51,7 +52,7 @@ const HoverGallery = (props) => (
           </div>
         </div>
         <div className={`${zoom} ${rightSectionBottom}`}>
-            <img src={props.product.images[4]} alt="Cannot get image"/>
+            <img src={props.product.images[4]} alt="Cannot get image" width="100%" height ="100%"/>
         </div>
       </div>
     </div>

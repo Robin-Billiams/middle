@@ -58,7 +58,7 @@ class BundleImages extends React.Component {
     return (<div className={frequentProductsImages}>
       <span className={frequentProductsImageAndSymbol}>
         <span className={frequentProductsImage}>
-      <img src={this.props.product.images[0]} alt="Cannot get image"/>
+      <img src={this.props.product.images[0]} alt="Cannot get image" width="100%" height="100%"/>
       </span>
       </span>
 
@@ -71,7 +71,7 @@ class BundleImages extends React.Component {
       </span>
 
       <span className={frequentProductsImage}>
-      <img src={this.props.product.images[1]} alt="Cannot get image"/>
+      <img src={this.props.product.images[1]} alt="Cannot get image" width="100%" height="100%"/>
       </span>
       </span>
       :
@@ -86,7 +86,7 @@ class BundleImages extends React.Component {
       </span>
 
       <span className={frequentProductsImage}>
-      <img src={this.props.product.images[2]} alt="Cannot get image"/>
+      <img src={this.props.product.images[2]} alt="Cannot get image" width="100%" height="100%"/>
       </span>
       </span>
       :
@@ -101,7 +101,7 @@ class BundleImages extends React.Component {
       </span>
 
       <span className={frequentProductsImage}>
-      <img src={this.props.product.images[3]} alt="Cannot get image"/>
+      <img src={this.props.product.images[3]} alt="Cannot get image" width="100%" height="100%"/>
       </span>
       </span>
       :
