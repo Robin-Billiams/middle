@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import styles from '../styles.module.css';
 
 class BundleImages extends React.Component {
   constructor(props) {
@@ -41,23 +42,22 @@ class BundleImages extends React.Component {
 
 
   render() {
-    return (<div className="frequent-products-images">
-      <span className="frequent-products-image-and-symbol">
-        <span className="fp-image">
+    return (<div className={styles.frequentProducts__images}>
+      <span className={styles.frequentProducts__imageAndSymbol}>
+        <span className={styles.frequentProducts__image}>
       <img src={this.props.product.images[0]} alt="Cannot get image"/>
       </span>
       </span>
 
       {this.props.productsForDisplay[1] ?
-      <span className="frequent-products-image-and-symbol">
-      <span className="frequent-products-symbol">
-      <div className="plus" id='plus-1'>
+      <span className={styles.frequentProducts__imageAndSymbol}>
+      <span className={styles.frequentProducts__symbol}>
+      <div className={styles.symbol} id='plus-1'>
         +
-      {/* <img src="https://i.imgur.com/Sbaiqsx.png" alt="Cannot get image" width="50" height="70"/> */}
       </div>
       </span>
 
-      <span className="fp-image">
+      <span className={styles.frequentProducts__image}>
       <img src={this.props.product.images[1]} alt="Cannot get image"/>
       </span>
       </span>
@@ -65,15 +65,14 @@ class BundleImages extends React.Component {
       null}
 
       {this.props.productsForDisplay[2] ?
-      <span className="frequent-products-image-and-symbol">
-      <span className="frequent-products-symbol">
-      <div className="plus" id='plus-2'>
+      <span className={styles.frequentProducts__imageAndSymbol}>
+      <span className={styles.frequentProducts__symbol}>
+      <div className={styles.symbol} id='plus-2'>
         +
-      {/* <img src="https://i.imgur.com/Sbaiqsx.png" alt="Cannot get image" width="50" height="70"/> */}
       </div>
       </span>
 
-      <span className="fp-image">
+      <span className={styles.frequentProducts__image}>
       <img src={this.props.product.images[2]} alt="Cannot get image"/>
       </span>
       </span>
@@ -81,42 +80,39 @@ class BundleImages extends React.Component {
       null}
 
       {this.props.productsForDisplay[3] ?
-      <span className="frequent-products-image-and-symbol">
-      <span className="frequent-products-symbol">
-      <div className="plus" id='plus-3'>
+      <span className={styles.frequentProducts__imageAndSymbol}>
+      <span className={styles.frequentProducts__symbol}>
+      <div className={styles.symbol} id='plus-3'>
         +
-      {/* <img src="https://i.imgur.com/Sbaiqsx.png" alt="Cannot get image" width="50" height="70"/> */}
       </div>
       </span>
 
-      <span className="fp-image">
+      <span className={styles.frequentProducts__image}>
       <img src={this.props.product.images[3]} alt="Cannot get image"/>
       </span>
       </span>
       :
       null}
 
-      <span className="frequent-products-image-and-symbol">
-      <span className="frequent-products-symbol">
-      <div className="equals">
+      <span className={styles.frequentProducts__imageAndSymbol}>
+      <span className={styles.frequentProducts__symbol}>
+      <div className={styles.symbol}>
         =
-      {/* <img src="https://i.imgur.com/5K5Cpby.png" alt="Cannot get image" width="50" height="70"/> */}
       </div>
       </span>
 
-      <span className="frequent-products-total-container">
+      <span className={styles.frequentProducts__totalContainer}>
         <div>
-          <div className="frequent-products-total-price-label">Total Price
+          <div className={styles.frequentProducts__totalPriceLabel}>Total Price
           </div>
-          <div className="frequent-products-total-price-values">
-            <span className="frequent-products-total-price-values-discount">${this.state.bundlePrice}
-            </span>
-            <span className="frequent-products-total-price-values-full">
-              <div className="frequent-products-total-price-values-original">$1,000,000.00</div>
-              <div className="frequent-products-total-price-values-save">Save $500.00</div>
+          <div className={styles.frequentProducts__totalPriceValues}>
+            <span>${this.state.bundlePrice}</span>
+            <span className={styles.frequentProducts__totalPriceValuesFull}>
+              <div className={styles.frequentProducts__totalPriceValuesOriginal}>$1,000,000.00</div>
+              <div className={styles.frequentProducts__totalPriceValueSave}>Save $500.00</div>
             </span>
           </div>
-          <button className="frequent-products-button">BUY TOGETHER</button>
+          <button className={styles.frequentProducts__button}>BUY TOGETHER</button>
         </div>
       </span>
       </span>

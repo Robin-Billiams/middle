@@ -9,7 +9,8 @@ import Carousel from './components/Carousel.jsx';
 import HoverGallery from './components/HoverGallery.jsx';
 import TextSection from './components/TextSection.jsx';
 
-import './styles.css';
+import styles from './styles.module.css';
+
 const server = 'http://localhost:4000/middle/';
 
 
@@ -73,30 +74,30 @@ class MiddleModule extends React.Component {
 
 
   render() {
-    return (<div className="grid-container">
+    return (<div>
       {this.state.currentProduct ?
       <div>
-      <div className="grid-item frequent-products-container">
-        <div className="frequent-products-title">
+      <div className={styles.frequentProducts}>
+        <div className={styles.frequentProducts__title}>
           <h2>Frequently Bought Together</h2>
         </div>
-        <div className="grid-item image-display">
+        <div className="image-display">
           <BundleImages product={this.state.currentProduct} productsForDisplay={this.state.imageVisibility}/>
         </div>
-        <div className="grid-item product-select">
+        <div className="product-select">
           <BundleSelect product={this.state.currentProduct} productChecked={this.changeVisibilityMatrix}/>
         </div>
         </div>
-        <div className="grid-item perks-banner">
+        <div className={styles.perksBanner}>
           <PerksBanner product={this.state.currentProduct}/>
         </div>
-        <div className="grid-item text-section">
+        <div className={styles.textSection}>
           <TextSection product={this.state.currentProduct}/>
         </div>
-        <div className="grid-item carousel">
+        <div className={styles.carousel}>
           <Carousel product={this.state.currentProduct} changeSlide={this.changeSlide} currentSlideImage={this.state.currentSlideImage}/>
         </div>
-        <div className="grid-item hover-gallery">
+        <div className={styles.hoverGallery}>
           <HoverGallery product={this.state.currentProduct}/>
         </div>
         </div>
