@@ -9,7 +9,7 @@ import Carousel from './components/Carousel.jsx';
 import HoverGallery from './components/HoverGallery.jsx';
 import TextSection from './components/TextSection.jsx';
 
-import styles from './styles.module.css';
+import {frequentProducts, frequentProductsTitle, frequentProductsTitleInner,perksBanner, textSection, carousel, hoverGallery} from './styles.module.css';
 
 const server = 'http://localhost:4000/middle/';
 
@@ -77,9 +77,9 @@ class MiddleModule extends React.Component {
     return (<div>
       {this.state.currentProduct ?
       <div>
-      <div className={styles.frequentProducts}>
-        <div className={styles.frequentProducts__title}>
-          <h2>Frequently Bought Together</h2>
+      <div className={frequentProducts}>
+        <div className={frequentProductsTitle}>
+          <h2 className={frequentProductsTitleInner}>Frequently Bought Together</h2>
         </div>
         <div className="image-display">
           <BundleImages product={this.state.currentProduct} productsForDisplay={this.state.imageVisibility}/>
@@ -88,16 +88,16 @@ class MiddleModule extends React.Component {
           <BundleSelect product={this.state.currentProduct} productChecked={this.changeVisibilityMatrix}/>
         </div>
         </div>
-        <div className={styles.perksBanner}>
+        <div className={perksBanner}>
           <PerksBanner product={this.state.currentProduct}/>
         </div>
-        <div className={styles.textSection}>
+        <div className={textSection}>
           <TextSection product={this.state.currentProduct}/>
         </div>
-        <div className={styles.carousel}>
+        <div className={carousel}>
           <Carousel product={this.state.currentProduct} changeSlide={this.changeSlide} currentSlideImage={this.state.currentSlideImage}/>
         </div>
-        <div className={styles.hoverGallery}>
+        <div className={hoverGallery}>
           <HoverGallery product={this.state.currentProduct}/>
         </div>
         </div>

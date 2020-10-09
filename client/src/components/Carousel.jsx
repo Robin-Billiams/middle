@@ -1,5 +1,19 @@
 import React from 'react';
-import styles from '../styles.module.css';
+import slideButtonNext from './svg/slideButtonNext.svg';
+
+import {
+carouselContainer,
+carouselSlide,
+carouselSlideImageContainer,
+carouselSlideImage,
+carouselSlideText,
+carouselSlideTextHeader,
+carouselSlideTextCaption,
+buttonPrev,
+buttonNext,
+hidden,
+slideButton
+} from '../styles.module.css';
 
 import ProgressBar from './ProgressBar.jsx';
 
@@ -60,24 +74,29 @@ componentWillUnmount() {
 
   render() {
     return (
-        <div className={styles.carousel__container}>
+        <div className={carouselContainer}>
         {this.props.product.images.slice(4).map((image, i) => {
         return this.props.currentSlideImage === i ?
-               <div className={styles.carousel__slide}>
-                 <div className={styles.carousel__slideImageContainer}>
-                <img src={image} alt="Cannot get image" className={styles.carousel__slideImage}/>
+               <div className={carouselSlide}>
+                 <div className={carouselSlideImageContainer}>
+                <img src={image} alt="Cannot get image" className={carouselSlideImage}/>
                 </div>
-                <div className={styles.carousel__slideText}>
-                  <div className={styles.carousel__slideTextHeader}>{this.props.product.long_headers[i]}</div>
-                  <div className={styles.carousel__slideTextCaption}>{this.props.product.captions[i + 3]}</div>
+                <div className={carouselSlideText}>
+                  <div className={carouselSlideTextHeader}>{this.props.product.long_headers[i]}</div>
+                  <div className={carouselSlideTextCaption}>{this.props.product.captions[i + 3]}</div>
                 </div>
                </div>
                :
                null
       })}
-      <button className={styles.button__prev} onClick={() => {this.props.changeSlide(-1); clearInterval(this.timer); this.startTimer();}}>Previous</button>
+      <button className={buttonPrev} onClick={() => {this.props.changeSlide(-1); clearInterval(this.timer); this.startTimer();}}>
+      &#60;
 
-      <button className={styles.button__next} onClick={() => {this.props.changeSlide(1); clearInterval(this.timer); this.startTimer();}}>Next</button>
+      </button>
+
+      <button className={buttonNext} onClick={() => {this.props.changeSlide(1); clearInterval(this.timer); this.startTimer();}}>
+      &#62;
+      </button>
 
       <ProgressBar progress={this.state.barPercentage}/>
   </div>

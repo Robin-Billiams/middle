@@ -1,19 +1,26 @@
 import React from 'react';
-import styles from '../styles.module.css';
+import {
+textSectionWrapper,
+textSectionHeaderWrapper,
+textSectionHeader,
+textSectionCaptionWrapper,
+textSectionCode,
+textSectionCaption
+} from '../styles.module.css';
 
 const TextSection = (props) => (
-  <div className={styles.textSection__wrapper}>
-    <div className={styles.textSection__header_wrapper}>
-      <h2 className={styles.textSection__header}>
+  <div className={textSectionWrapper}>
+    <div className={textSectionHeaderWrapper}>
+      <h2 className={textSectionHeader}>
         {props.product.long_headers[8]}
       </h2>
     </div>
 
-  <div className={styles.textSection__caption_wrapper}>
-    <h3 className={styles.textSection__code}>
+  <div className={textSectionCaptionWrapper}>
+    <h3 className={textSectionCode}>
        Q60T QLED
     </h3>
-    <p className={styles.textSection__caption}>
+    <p className={textSectionCaption}>
     {props.product.captions[4]}
     </p>
   </div>
