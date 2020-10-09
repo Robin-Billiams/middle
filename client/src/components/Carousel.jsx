@@ -1,5 +1,4 @@
 import React from 'react';
-import slideButtonNext from './svg/slideButtonNext.svg';
 
 import {
 carouselContainer,
@@ -11,8 +10,6 @@ carouselSlideTextHeader,
 carouselSlideTextCaption,
 buttonPrev,
 buttonNext,
-hidden,
-slideButton
 } from '../styles.module.css';
 
 import ProgressBar from './ProgressBar.jsx';
@@ -91,7 +88,6 @@ componentWillUnmount() {
       })}
       <button className={buttonPrev} onClick={() => {this.props.changeSlide(-1); clearInterval(this.timer); this.startTimer();}}>
       &#60;
-
       </button>
 
       <button className={buttonNext} onClick={() => {this.props.changeSlide(1); clearInterval(this.timer); this.startTimer();}}>
