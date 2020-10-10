@@ -295,9 +295,11 @@ img {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.textSectionHeaderWrapper {
+/* .textSectionHeaderWrapper {
   text-align: center;
-}
+  padding-right: 80px;
+  padding-left: 80px;
+} */
 
 .textSectionHeader {
   font-size: 40px;
@@ -311,7 +313,7 @@ img {
   font-size: 20px;
 }
 
-.textSectionCaptionWrapper {
+.textSectionCaptionWrapper, .textSectionHeaderWrapper {
   width: 40%;
   margin: auto;
   text-align: center;
@@ -505,13 +507,13 @@ img {
 .leftSectionBottomRight {
   float: left;
   height: 100%;
-  width: 564px;
+  width: 67%;
   display: block;
   position: relative;
   font-size: 0;
   line-height: 0;
   overflow: hidden;
-  margin-left: 24px;
+  margin-left: 3%;
 }
 
 
