@@ -17,7 +17,7 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#foo__styles-module__middle img {
+img {
   object-fit: cover;
 }
 
