@@ -76,7 +76,7 @@ componentWillUnmount() {
         return this.props.currentSlideImage === i ?
                <div className={carouselSlide}>
                  <div className={carouselSlideImageContainer}>
-                <img src={image} alt="Cannot get image" className={carouselSlideImage}/>
+                <img src={image} alt="Cannot get image" className={carouselSlideImage} width="100%" height="100%"/>
                 </div>
                 <div className={carouselSlideText}>
                   <div className={carouselSlideTextHeader}>{this.props.product.long_headers[i]}</div>
