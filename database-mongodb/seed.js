@@ -148,7 +148,7 @@ for (let i = 0; i < 100; i++) {
   }
   prod.captions = []; //CAPTIONS
   for (let j = 0; j < 13; j++) {
-    let cap = randomParagraph({min: 1, max: 3});
+    let cap = randomParagraph({min: 1, max: 2});
     prod.captions.push(cap);
   }
   products.push(prod);
