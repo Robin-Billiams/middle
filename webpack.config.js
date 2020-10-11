@@ -4,11 +4,13 @@ var DIST_DIR = path.join(__dirname, '/client/dist');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: `${SRC_DIR}/index.jsx`,
   output: {
     filename: 'bundle.js',
     path: DIST_DIR
   },
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
