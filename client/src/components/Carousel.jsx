@@ -20,12 +20,36 @@ class Carousel extends React.Component {
     this.state = {
       time: 7, //slide interval
       barPercentage: 0,
-      msPassed: 0 //tracks ms per interval
+      msPassed: 0, //tracks ms per interval
+      currentSlideImage: 0
     };
 
     this.startTimer = this.startTimer.bind(this);
     this.progressBarInterval = this.progressBarInterval.bind(this);
     this.timeSlidesAndBar = this.timeSlidesAndBar.bind(this);
+    this.changeSlide = this.changeSlide.bind(this);
+  }
+
+  changeSlide(delta) {
+    if (delta === -1 && this.state.currentSlideImage > 0) {
+      let newImage = this.state.currentSlideImage - 1;
+      this.setState({
+        currentSlideImage: newImage
+      });
+    } else if (delta === 1 && this.state.currentSlideImage < 9) {
+      let newImage = this.state.currentSlideImage + 1;
+      this.setState({
+        currentSlideImage: newImage
+      });
+    } else if (delta === -1 && this.state.currentSlideImage === 0) {
+      this.setState({
+        currentSlideImage: 9
+      });
+    } else {
+      this.setState({
+        currentSlideImage: 0
+      });
+    }
   }
 
 
@@ -49,7 +73,7 @@ class Carousel extends React.Component {
 
   timeSlidesAndBar() { //if msPassed
     if (this.state.msPassed === 7000) { //every 7s
-      this.props.changeSlide(1); //change slide
+      this.changeSlide(1); //change slide
       this.setState({ //reset bar
         barPercentage: 0,//first reset bar
         msPassed: 0 //reset time
@@ -73,8 +97,8 @@ componentWillUnmount() {
     return (
         <div className={carouselContainer}>
         {this.props.product.images.slice(4).map((image, i) => {
-        return this.props.currentSlideImage === i ?
-               <div className={carouselSlide}>
+        return this.state.currentSlideImage === i ?
+               <div key={image} className={carouselSlide}>
                  <div className={carouselSlideImageContainer}>
                 <img src={image} alt="Cannot get image" className={carouselSlideImage} width="100%" height="100%"/>
                 </div>
@@ -86,11 +110,11 @@ componentWillUnmount() {
                :
                null
       })}
-      <button className={buttonPrev} onClick={() => {this.props.changeSlide(-1); clearInterval(this.timer); this.startTimer();}}>
+      <button className={buttonPrev} onClick={() => {this.changeSlide(-1); clearInterval(this.timer); this.startTimer();}}>
       &#60;
       </button>
 
-      <button className={buttonNext} onClick={() => {this.props.changeSlide(1); clearInterval(this.timer); this.startTimer();}}>
+      <button className={buttonNext} onClick={() => {this.changeSlide(1); clearInterval(this.timer); this.startTimer();}}>
       &#62;
       </button>
 

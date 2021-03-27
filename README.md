@@ -1,5 +1,5 @@
 # middle
-This is the 'middle' service module for Jamsung/Gadget Depot/Mock Samsung
+This is the 'middle' service module for Gadget Depot
 
 Includes:
 Product bundling widget
@@ -7,7 +7,8 @@ Slideshow
 Hover gallery
 
 To run:
-  install dependencies: npm install
-  db stup: npm run db:setup
-  build: npm run dev:react
-  server: npm start
+  > npm install
+  > npm run db:setup
+  > npm run dev:react
+  > npm start
+  navigate to http://localhost:4000/?1

@@ -210,6 +210,11 @@ img {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.foo__styles-module__perksBox0Inner {
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: bold;
+}
 
 .foo__styles-module__perksBox0 {
   box-sizing: border-box;
@@ -227,11 +232,7 @@ img {
   font-weight: bold;
 }
 
-.foo__styles-module__perksBox0inner {
-  font-size: 40px;
-  line-height: 1.2;
-  font-weight: bold;
-}
+
 
 .foo__styles-module__perksBoxtopics {
   box-sizing: border-box;

@@ -119,7 +119,7 @@ class BundleImages extends React.Component {
           <div className={frequentProductsTotalPriceLabel}>Total Price
           </div>
           <div className={frequentProductsTotalPriceValues}>
-            <span>${this.state.bundlePrice}</span>
+            <span id="bundleprice">${this.state.bundlePrice}</span>
             <span className={frequentProductsTotalPriceValuesFull}>
               <div className={frequentProductsTotalPriceValuesOriginal}>$1,000,000.00</div>
               <div className={frequentProductsTotalPriceValueSave}>Save $500.00</div>

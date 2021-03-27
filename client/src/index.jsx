@@ -20,12 +20,12 @@ class MiddleModule extends React.Component {
     this.state = {
       currentProduct: null,
       imageVisibility: null,
-      bundlePrice: null,
-      currentSlideImage: 0
+      bundlePrice: null
+      //currentSlideImage: 0
     };
     this.getProducts = this.getProducts.bind(this);
     this.changeVisibilityMatrix = this.changeVisibilityMatrix.bind(this);
-    this.changeSlide = this.changeSlide.bind(this);
+    //this.changeSlide = this.changeSlide.bind(this);
   }
 
   changeVisibilityMatrix(x) {
@@ -50,27 +50,27 @@ class MiddleModule extends React.Component {
     .then(data => this.setState({currentProduct: data.data, imageVisibility: [true, true, true, true]}));
   }
 
-  changeSlide(delta) {
-    if (delta === -1 && this.state.currentSlideImage > 0) {
-      let newImage = this.state.currentSlideImage - 1;
-      this.setState({
-        currentSlideImage: newImage
-      });
-    } else if (delta === 1 && this.state.currentSlideImage < 9) {
-      let newImage = this.state.currentSlideImage + 1;
-      this.setState({
-        currentSlideImage: newImage
-      });
-    } else if (delta === -1 && this.state.currentSlideImage === 0) {
-      this.setState({
-        currentSlideImage: 9
-      });
-    } else {
-      this.setState({
-        currentSlideImage: 0
-      });
-    }
-  }
+  // changeSlide(delta) {
+  //   if (delta === -1 && this.state.currentSlideImage > 0) {
+  //     let newImage = this.state.currentSlideImage - 1;
+  //     this.setState({
+  //       currentSlideImage: newImage
+  //     });
+  //   } else if (delta === 1 && this.state.currentSlideImage < 9) {
+  //     let newImage = this.state.currentSlideImage + 1;
+  //     this.setState({
+  //       currentSlideImage: newImage
+  //     });
+  //   } else if (delta === -1 && this.state.currentSlideImage === 0) {
+  //     this.setState({
+  //       currentSlideImage: 9
+  //     });
+  //   } else {
+  //     this.setState({
+  //       currentSlideImage: 0
+  //     });
+  //   }
+  // }
 
 
   render() {
@@ -95,7 +95,7 @@ class MiddleModule extends React.Component {
           <TextSection product={this.state.currentProduct}/>
         </div>
         <div className={carousel}>
-          <Carousel product={this.state.currentProduct} changeSlide={this.changeSlide} currentSlideImage={this.state.currentSlideImage}/>
+          <Carousel product={this.state.currentProduct}/>
         </div>
         <div className={hoverGallery}>
           <HoverGallery product={this.state.currentProduct}/>
@@ -109,3 +109,4 @@ class MiddleModule extends React.Component {
 }
 
 ReactDOM.render(<MiddleModule />, document.getElementById('middle'));
+//export default MiddleModule;

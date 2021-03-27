@@ -2,7 +2,7 @@ import React from 'react';
 import {
 perksContainer,
 perksBox0,
-perksBox0inner,
+perksBox0Inner,
 perksBoxtopics,
 perksBox,
 perksBoxheader,
@@ -16,7 +16,7 @@ const PerksBanner = (props) => (
 
   <div className={perksContainer}>
     <div className={perksBox0}>
-      <h3 className={perksBox0inner}>{props.product.short_headers[0]}</h3>
+      <h3 className={perksBox0Inner}>{props.product.short_headers[0]}</h3>
     </div>
 
     <div className={perksBoxtopics}>
